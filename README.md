@@ -2,6 +2,8 @@
 
 ## Whimsical Diagram
 
+https://whimsical.com/QTDaTCyr8SbKkyDw13vHm4
+
 ## Team Expectations
 
 https://docs.google.com/document/d/1xS6DxpauDMYwPkVZWrjiPyiCryEzWWx_3KZgVs64eE8/edit?usp=sharing

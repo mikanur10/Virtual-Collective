@@ -28,9 +28,9 @@ https://github.com/mikanur10/Virtual-Collective/projects/1?add_cards_query=is%3A
 ```
 Const event = new Schema(
 	{
-		EventName: { type: String, required: true },
+		name: { type: String, required: true },
 		imgUrl: { type: String, required: true },
-		EventDescription: { type: String, required: true },
+		description: { type: String, required: true },
 		date: { type: String, required: true },
 		time: { type: String, required: true },
 		category: { type: String, required: true },

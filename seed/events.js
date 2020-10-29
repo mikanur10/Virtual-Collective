@@ -17,7 +17,7 @@ const main = async () => {
     },
     {
       name: "Mark Rothko",
-      imgUrl: "",
+      imgUrl: "https://i.imgur.com/XjcihYZ.jpg",
       description: `I do not have a description for this`,
       date: "October 13, 2020",
       time: "3 PM",

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", bold;
+}
+
+#art-category,
+#music-category,
+#movies-category,
+#theatre-category,
+#comedy-category {
+  width: 75%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#art-category {
+  background-image: url("https://i.imgur.com/JcyAB6x.jpg");
+}
+
+#music-category {
+  background-image: url("https://i.imgur.com/EXBxDW6.jpg");
+}
+
+#movies-category {
+  background-image: url("https://i.imgur.com/eOeQ4z6.jpg");
+}
+
+#theatre-category {
+  background-image: url("https://i.imgur.com/YgvsHQV.jpg");
+}
+
+#comedy-category {
+  background-image: url("https://i.imgur.com/qRBBT3w.jpg");
+}
+
+#category-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#category-header {
+  font-family: "Montserrat", bold;
+  padding-left: 160px;
+  margin-top: 60px;
+  font-size: 28px;
+}

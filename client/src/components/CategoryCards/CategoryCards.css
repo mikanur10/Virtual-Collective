@@ -6,6 +6,10 @@ a {
   font-family: "Montserrat", bold;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 #art-category,
 #music-category,
 #movies-category,
@@ -52,6 +56,6 @@ a {
 #category-header {
   font-family: "Montserrat", bold;
   padding-left: 160px;
-  margin-top: 60px;
+  /* margin-top: 30px; */
   font-size: 28px;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './EventPage.css'
 import EventCarousel from '../../components/Carousel/EventCarousel'
 import UniversalLayout from '../../components/shared/UniversalLayout/UniversalLayout'
+import UpcomingEvents from '../../components/UpcomingEvents/UpcomingEvents';
 
 
 
@@ -14,7 +15,7 @@ function EventPage(props) {
       <div className="carousel">
         <EventCarousel />
       </div>
-   
+    <UpcomingEvents />
     </UniversalLayout>
 
   );

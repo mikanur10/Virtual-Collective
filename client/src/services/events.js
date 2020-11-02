@@ -2,7 +2,8 @@ import api from './apiConfig'
 
 export const getEvents = async () => {
   try {
-      const response = await api.get('/products')
+    const response = await api.get('/events')
+    console.log(response);
       return response.data
   } catch (error) {
       throw error
@@ -18,18 +19,18 @@ export const getEvent = async id => {
   }
 }
 
-export const createEvent = async product => {
+export const createEvent = async event => {
   try {
-      const response = await api.post('/events', product)
+      const response = await api.post('/events', event)
       return response.data
   } catch (error) {
       throw error
   }
 }
 
-export const updateEvent = async (id, product) => {
+export const updateEvent = async (id, event) => {
   try {
-      const response = await api.put(`/events/${id}`, product)
+      const response = await api.put(`/events/${id}`, event)
       return response.data
   } catch (error) {
       throw error

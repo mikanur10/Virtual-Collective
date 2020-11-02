@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./UpcomingEvents.css";
 import { getEvents } from "../../services/events";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const UpcomingEvents = () => {
   const params = useParams();
@@ -9,19 +9,20 @@ const UpcomingEvents = () => {
   const [isLoaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const fetchEvent = async () => {
+    const fetchEvents = async () => {
       const response = await getEvents();
       console.log(response);
       setEvents(response);
       setLoaded(true);
     };
-    fetchEvent();
+    fetchEvents();
   }, []);
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
   const filterEvents = events.filter((event) => event.category === "Arts");
+
   return (
     <div className="all-content">
       <div>
@@ -29,7 +30,9 @@ const UpcomingEvents = () => {
       </div>
       {filterEvents.map((event) => (
         <div className="upcoming-events">
-          <img className="image" src={event.imgUrl} />
+          <Link to={`/events/${event._id}`}>
+            <img className="image" src={event.imgUrl} />
+          </Link>
           <div className="info">
             <p className="name">{event.name}</p>
             <p className="date">

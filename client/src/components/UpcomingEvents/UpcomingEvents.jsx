@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./UpcomingEvents.css";
 import { getEvents } from "../../services/events";
+import { useParams} from 'react-router-dom'
 
 const UpcomingEvents = () => {
+    const params = useParams();
   const [events, setEvents] = useState({});
   const [isLoaded, setLoaded] = useState(false);
 
@@ -19,32 +21,25 @@ const UpcomingEvents = () => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-
+  const filterEvents = events.filter(event =>
+    event.category === "Arts"
+    );
   return (
-    <div className="bird-landing">
-      {events &&
-        events.map(
-          (event) => (
-            // <Link to={`/bird/${event.name}`}>
-            <img src={event.imgUrl} />
+      <div className="upcoming-events">
+      {
+        filterEvents.map(
+            (event) => (
+                
+                <div>
+                    <img src={event.imgUrl} />
+                    <p>{event.name}</p>
+                    <p>{event.date}</p>
+                    <p>{event.time}</p>
+                    <p>{event.subCategory}</p>
+             </div>
           )
-          // </Link>
         )}
     </div>
-
-    // <div className="product-detail">
-    //     <img className="product-detail-image" src={event.imgURL} alt={event.name} />
-    //     <div className="detail">
-    //         <div className="name">{event.name}</div>
-    //         <div className="price">{`$${event.date}`}</div>
-    //         <div className="description">{event.time}</div>
-    //         <div className="description">{event.subCategory}</div>
-    //         <div className="button-container">
-    //             <button className="edit-button"><Link className="edit-link" to={`/products/${product._id}/edit`}>Edit</Link></button>
-    //             <button className="delete-button" onClick={() => deleteProduct(product._id)}>Delete</button>
-    //         </div>
-    //     </div>
-    // </div>
   );
 };
 

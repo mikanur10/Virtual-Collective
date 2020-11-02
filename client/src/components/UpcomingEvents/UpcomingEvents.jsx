@@ -25,23 +25,7 @@ const UpcomingEvents = () => {
     event.category === "Arts"
     );
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="bird-landing">
-        {events && events.map(event =>
-          // <Link to={`/bird/${event.name}`}>
-          <img src={event.imgUrl} />
-=======
-    <div className="bird-landing">
-      {events &&
-        events.map(
-          (event) => (
-            // <Link to={`/bird/${event.name}`}>
-            <img src={event.imgUrl} />
-          )
->>>>>>> 83113f8013eb068f64d3a75602ad9b660b5474b8
-          // </Link>
-=======
+
       <div className="upcoming-events">
       {
         filterEvents.map(
@@ -55,7 +39,7 @@ const UpcomingEvents = () => {
                     <p>{event.subCategory}</p>
              </div>
           )
->>>>>>> f38921f5de9314835548683fd6f5996347d1e334
+
         )}
     </div>
   );

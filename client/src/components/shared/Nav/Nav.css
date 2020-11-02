@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .nav2 {
   display: flex;
@@ -12,10 +12,11 @@
 }
 
 .logo {
-  font-family: "Montserrat", bold;
+  font-family: "Montserrat", sans-serif;
   padding-top: 20px;
   padding-left: 15px;
   font-size: 36px;
+  font-weight: 700;
   width: 40%;
   height: 60pt;
   text-decoration: none;

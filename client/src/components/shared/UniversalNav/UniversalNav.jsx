@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <nav className="nav">
-      <NavLink className="logo" to="/">
+      <NavLink id="logo" to="/">
         VIRTUAL COLLECTIVE
       </NavLink>
       <div className="links">

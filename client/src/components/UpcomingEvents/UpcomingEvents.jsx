@@ -23,24 +23,6 @@ const UpcomingEvents = () => {
   }
   const filterEvents = events.filter((event) => event.category === "Arts");
   return (
-<<<<<<< HEAD
-
-      <div className="upcoming-events">
-      {
-        filterEvents.map(
-            (event) => (
-                
-                <div>
-                    <img src={event.imgUrl} />
-                    <p>{event.name}</p>
-                    <p>{event.date}</p>
-                    <p>{event.time}</p>
-                    <p>{event.subCategory}</p>
-             </div>
-          )
-
-        )}
-=======
     <div className="all-content">
       <div>
         <h3 className="upcoming-title">UPCOMING</h3>
@@ -57,7 +39,6 @@ const UpcomingEvents = () => {
           </div>
         </div>
       ))}
->>>>>>> ebeab156f6d33ced66458b98ab647ffb0ab62d14
     </div>
   );
 };

@@ -26,7 +26,7 @@ const UpcomingEvents = (props) => {
       <div className="bird-landing">
         {events && events.map(event =>
           // <Link to={`/bird/${event.name}`}>
-            <img src={event.imgUrl} />
+          <img src={event.imgUrl} />
           // </Link>
         )}
       </div>

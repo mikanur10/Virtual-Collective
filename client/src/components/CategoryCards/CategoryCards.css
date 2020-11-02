@@ -8,6 +8,7 @@ a {
 
 a:hover{
     text-decoration: none;
+    color: rgb(19, 96, 173);
 }
 
 #art-category,

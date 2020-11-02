@@ -1,7 +1,8 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import Homepage from "./screens/Homepage/Homepage";
-// import Products from "./screens/Products/Products";
+import EventPage from "./screens/EventPage/EventPage";
 // import ProductCreate from "./screens/ProductCreate/ProductCreate";
 // import ProductEdit from "./screens/ProductEdit/ProductEdit";
 // import ProductDetail from "./screens/ProductDetail/ProductDetail";
@@ -12,8 +13,8 @@ const App = () => {
     <div className="app">
       <Switch>
         <Route exact path="/" component={Homepage} />
-        {/* <Route exact path="/products" component={Products} />
-        <Route path="/add-product" component={ProductCreate} />
+        <Route exact path="/art" component={EventPage} />
+        {/* <Route path="/add-product" component={ProductCreate} />
         <Route exact path="/products/:id/edit" component={ProductEdit} />
         <Route exact path="/products/:id" component={ProductDetail} /> */}
       </Switch>

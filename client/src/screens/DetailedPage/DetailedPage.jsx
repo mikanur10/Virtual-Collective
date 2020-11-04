@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./DetailedPage.css";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
-import { getEvent } from "../../services/events";
+import { getEvent, deleteEvent} from "../../services/events";
 
 function DetailedPage(props) {
   const { _id } = useParams();
@@ -47,6 +47,14 @@ function DetailedPage(props) {
           <Link to={`/events/${event._id}/event`}>
             <button className="waiting-room">JOIN WAITING ROOM</button>
           </Link>
+        </div>
+        <div className="delete-edit">
+          <Link to="/events/arts">
+        <button className="delete-button" onClick={() => deleteEvent(event._id)}>Delete</button>
+          </Link>
+
+          <button className="edit-button"><Link className="edit-link" to={`/events/${event._id}/edit`}>Edit</Link></button>
+
         </div>
       </div>
     </UniversalLayout>

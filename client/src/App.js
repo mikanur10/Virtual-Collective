@@ -5,9 +5,10 @@ import Homepage from "./screens/Homepage/Homepage";
 import EventPage from "./screens/EventPage/EventPage";
 import DetailedPage from "./screens/DetailedPage/DetailedPage";
 import WaitingRoom from "./screens/WaitingRoom/WaitingRoom";
-import AddEventPage from "./screens/AddEventPage/AddEventPage"
+import AddEventPage from "./screens/AddEventPage/AddEventPage";
 import FavoritesPage from "./screens/FavoritesPage/FavoritesPage";
 import EditEventPage from "./screens/EditEventPage/EditEventPage";
+import AllUpcoming from "./screens/AllUpcoming/AllUpcoming";
 import { Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -19,8 +20,9 @@ const App = () => {
         <Route exact path="/events/:_id" component={DetailedPage} />
         <Route exact path="/events/:_id/event" component={WaitingRoom} />
         <Route path="/create" component={AddEventPage} />
-        <Route path="/favorites" component={FavoritesPage}/>
-        <Route exact path= "/events/:_id/edit" component={EditEventPage}/>
+        <Route path="/favorites" component={FavoritesPage} />
+        <Route exact path="/events/:_id/edit" component={EditEventPage} />
+        <Route exact path="/upcoming" component={AllUpcoming} />
       </Switch>
     </div>
   );

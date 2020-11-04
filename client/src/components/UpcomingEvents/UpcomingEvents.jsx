@@ -27,6 +27,9 @@ const UpcomingEvents = () => {
     <div className="all-content">
       <div>
         <h3 className="upcoming-title">UPCOMING</h3>
+        <Link to="/create">
+        <img className="add-icon" src="https://i.imgur.com/rYgXM9m.png" alt="add"/>
+        </Link>
       </div>
       {filterEvents.map((event) => (
         <div className="upcoming-events">

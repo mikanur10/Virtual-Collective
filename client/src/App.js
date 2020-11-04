@@ -5,6 +5,7 @@ import Homepage from "./screens/Homepage/Homepage";
 import EventPage from "./screens/EventPage/EventPage";
 import DetailedPage from "./screens/DetailedPage/DetailedPage";
 import WaitingRoom from "./screens/WaitingRoom/WaitingRoom";
+import AddEventPage from "./screens/AddEventPage/AddEventPage"
 import { Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path="/events/arts" component={EventPage} />
         <Route exact path="/events/:_id" component={DetailedPage} />
         <Route exact path="/events/:_id/event" component={WaitingRoom} />
+        <Route path="/create" component={AddEventPage} />
       </Switch>
     </div>
   );

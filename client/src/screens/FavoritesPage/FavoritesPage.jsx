@@ -34,18 +34,18 @@ const FavoritesPage = () => {
         
       </div>
       {filterEvents.map((event) => (
-          <div className="favorite-events">
           <Link to={`/events/${event._id}`}>
+          <div className="favorite-events">
             <img className="favorite-image" src={event.imgUrl} />
-          </Link>
           <div className="favorite-items">
-            <div className="favorite-info">
+          
                 <p className="favorite-name">{event.name}</p>
                 <p className="favorite-date">{event.date} @ {event.time}</p>
                 <p className="favorite-subCategory">{event.subCategory}</p>
-            </div>
+          
           </div>
         </div>
+          </Link>
       ))}
       </div>
       </UniversalLayout>

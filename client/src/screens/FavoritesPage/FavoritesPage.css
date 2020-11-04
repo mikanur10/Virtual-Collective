@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-.image {
-  width: 485px;
-  height: 270px;
-}
+
 
 
 
@@ -15,12 +12,11 @@
   margin-left: 60px;
 }
 
-.favorite-content {
-  margin-top: 150px;
-}
+
 
 .favorite-title {
-  margin-left: 120px;
+  margin-left: 90px;
+  margin-top: 120px;
   margin-bottom: 35px;
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
@@ -29,17 +25,37 @@
 }
 
 .favorite-image {
-  position: relative;
- 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:85%;
+    height: 350px;
+    opacity: 60%;
   
 }
  
 .favorite-items{
-    position: relative;
-    top: 200px;
-    left: 0;
-    width: 100%;
-    margin: 0 auto;
-    width: 300px;
-    height: 50px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    margin-top: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(10%, -120%);
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 50px;
+  width: 90%;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
 }
+.favorite-name,.favorite-date,.favorite-subCategory{
+    margin-bottom: 40px;
+}
+.favorite-events{
+    margin-bottom: -250px;
+}
+

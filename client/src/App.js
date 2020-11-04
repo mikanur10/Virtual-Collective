@@ -4,9 +4,7 @@ import "./App.css";
 import Homepage from "./screens/Homepage/Homepage";
 import EventPage from "./screens/EventPage/EventPage";
 import DetailedPage from "./screens/DetailedPage/DetailedPage";
-// import ProductCreate from "./screens/ProductCreate/ProductCreate";
-// import ProductEdit from "./screens/ProductEdit/ProductEdit";
-// import ProductDetail from "./screens/ProductDetail/ProductDetail";
+import WaitingRoom from "./screens/WaitingRoom/WaitingRoom";
 import { Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -16,6 +14,7 @@ const App = () => {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/events/arts" component={EventPage} />
         <Route exact path="/events/:_id" component={DetailedPage} />
+        <Route exact path="/events/:_id/event" component={WaitingRoom} />
       </Switch>
     </div>
   );

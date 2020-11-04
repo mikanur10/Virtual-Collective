@@ -38,6 +38,13 @@
   color: rgb(19, 96, 173);
 }
 .add-icon {
-  height: 22px;
-  width: 22px;
+  height: 36px;
+  width: 36px;
+ 
+
+}
+
+.upcoming-add{
+  display: flex;
+  flex-direction: row;
 }

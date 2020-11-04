@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import './AddEventPage.css'
+import React, { useState, useEffect } from 'react'
+import './EditEventPage.css'
 import UniversalLayout from '../../components/shared/UniversalLayout/UniversalLayout'
-import { Redirect } from 'react-router-dom'
-import { createEvent } from '../../services/events'
+import { Redirect, useParams } from 'react-router-dom'
+import { getEvent, updateEvent } from '../../services/events'
 
-const AddEventPage = (props) => {
+const EditEventPage = (props) => {
 
     const [events, setEvents] = useState({
             name: '',
@@ -19,7 +19,16 @@ const AddEventPage = (props) => {
             favorite: false
         })
 
-    const [isCreated, setCreated] = useState(false)
+    const [isUpdated, setUpdated] = useState(false)
+    let { _id } = useParams()
+
+    useEffect(() => {
+        const fetchEvent = async () => {
+            const event = await getEvent(_id)
+            setEvents(event)
+        }
+        fetchEvent()
+    }, [_id])
 
     const handleChange = (event) => {
         const { name, value } = event.target
@@ -31,17 +40,18 @@ const AddEventPage = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const created = await createEvent(events)
-        setCreated({ created })
+        let { _id } = props.match.params
+        const updated = await updateEvent(_id, events)
+        setUpdated(updated)
     }
 
-    if (isCreated) {
-        return <Redirect to={`/events/arts`} />
+    if (isUpdated) {
+        return <Redirect to={`/events/${_id}`} />
     }
     return (
         <UniversalLayout >
             <div>
-                <h1 className= 'create-title'>CREATE EVENT</h1>
+                <h1 className= 'create-title'>EDIT EVENT</h1>
             </div>
         <div className= 'add-container'>
                 
@@ -126,11 +136,11 @@ const AddEventPage = (props) => {
                   <option value="Lecture">Lecture</option>
                   <option value="Class">Class</option>
                 </select>
-                <button type='submit' className="submit-button">Submit</button>
+                <button type='submit' className="submit-button">Save</button>
             </form>
         </div>
         </UniversalLayout>
     )
 }
 
-export default AddEventPage
+export default EditEventPage

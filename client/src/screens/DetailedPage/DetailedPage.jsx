@@ -22,7 +22,7 @@ function DetailedPage(props) {
       <div>
         <div>
           <Link to="/events/arts">
-            <p className="back-button">ARTS</p>
+            <p className="back-button">&#60; ARTS</p>
           </Link>
         </div>
         <div id="detail-page">

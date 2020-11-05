@@ -15,7 +15,7 @@ function DetailedPage(props) {
       setEvent(response);
     };
     fetchEvent(_id);
-  }, []);
+  }, [_id]);
 
   return (
     <UniversalLayout>

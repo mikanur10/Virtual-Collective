@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./AllUpcoming.css";
 import { getEvents } from "../../services/events";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
 
 const AllUpcoming = () => {
-  const params = useParams();
   const [events, setEvents] = useState({});
   const [isLoaded, setLoaded] = useState(false);
 
@@ -40,7 +39,7 @@ const AllUpcoming = () => {
           {events.map((event) => (
             <div className="upcoming-events">
               <Link to={`/events/${event._id}`}>
-                <img className="image" src={event.imgUrl} />
+                <img className="image" src={event.imgUrl} alt="event" />
               </Link>
               <div className="info">
                 <p className="name">{event.name}</p>

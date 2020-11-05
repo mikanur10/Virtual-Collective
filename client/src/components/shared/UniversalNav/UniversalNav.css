@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-.nav2 {
+.nav {
   display: flex;
   position: fixed;
   top: 0;
   height: 90px;
   width: 100%;
   z-index: 100;
-  background-color: rgba(196, 196, 196, 0.29);
+  background-color: rgb(11, 54, 97);
   justify-content: space-between;
 }
 
-.logo {
+#logo {
   font-family: "Montserrat", sans-serif;
   padding-top: 20px;
   padding-left: 15px;
@@ -24,7 +24,8 @@
 }
 
 .links {
-  font-family: "Montserrat", bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   display: flex;
   text-align: center;
   justify-content: space-around;
@@ -35,7 +36,9 @@
 }
 
 .link {
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: white;
   font-size: 20px;
+  font-weight: 700;
 }

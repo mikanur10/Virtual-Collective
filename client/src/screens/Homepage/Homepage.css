@@ -1,0 +1,15 @@
+.header-image {
+  width: 100%;
+  opacity: 0.75;
+}
+.image-text {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -350%);
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 50px;
+  width: 90%;
+  text-align: center;
+}

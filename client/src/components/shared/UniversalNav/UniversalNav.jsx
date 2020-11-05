@@ -1,11 +1,11 @@
 import React from "react";
-import "./Nav.css";
+import "./UniversalNav.css";
 import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className="nav2">
-      <NavLink className="logo" to="/">
+    <nav className="nav">
+      <NavLink id="logo" to="/">
         VIRTUAL COLLECTIVE
       </NavLink>
       <div className="links">

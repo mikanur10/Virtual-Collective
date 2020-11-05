@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+#detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detail-container {
+  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detail-image {
+  width: 713px;
+  height: 450px;
+  margin-top: 60px;
+}
+.detail-name {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(19, 96, 173);
+  margin-bottom: 60px;
+}
+.descrip-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+.date-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.detail-date,
+.detail-descrip {
+  /* src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"); */
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+.detail-descrip {
+  width: 55%;
+}
+.back-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 150px;
+  margin-left: 120px;
+
+  color: rgb(19, 96, 173);
+}
+
+.waiting-room,
+.delete-button,
+.edit-button {
+  background-color: rgb(11, 54, 97);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 36px;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.delete-edit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.delete-button {
+  margin-right: 20px;
+}
+
+.detail-heart {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(1500%, -665%);
+  height: 70px;
+  width: 70px;
+}

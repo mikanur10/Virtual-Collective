@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./FavoritesPage.css";
-import { getEvents } from "../../services/events";
+import { getEvents, updateEvent } from "../../services/events";
 import { useParams, Link } from "react-router-dom";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
 
-const FavoritesPage = () => {
-  const params = useParams();
+const FavoritesPage = (props) => {
+  const {params} = useParams();
   const [events, setEvents] = useState({});
   const [isLoaded, setLoaded] = useState(false);
+  const [eventFavorite, setEventFavorite] = useState({
+    favorite: false,
+})
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -18,6 +21,17 @@ const FavoritesPage = () => {
     };
     fetchEvents();
   }, []);
+
+  const handleFavorite = async (event) => {
+      let { _id } = props.match.params
+      const updated = await updateEvent(_id, events)
+      setEventFavorite(updated)
+    if (eventFavorite.favorite === false) {
+        console.log(eventFavorite);
+        return eventFavorite.favorite = true;
+      }
+  }
+
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -43,7 +57,9 @@ const FavoritesPage = () => {
                   <p className="favorite-subCategory">{event.subCategory}</p>
                 </div>
               </Link>
-              <button className="heart-button-container">
+              <button
+                className="heart-button-container"
+                onClick={handleFavorite}>
                 <img
                   className="favorite-heart"
                   src="https://i.imgur.com/dHFsXQ4.png"

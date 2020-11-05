@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./FavoritesPage.css";
 import { getEvents } from "../../services/events";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
 
 const FavoritesPage = () => {
-  const params = useParams();
   const [events, setEvents] = useState({});
   const [isLoaded, setLoaded] = useState(false);
 
@@ -33,7 +32,11 @@ const FavoritesPage = () => {
           </div>
           {filterEvents.map((event) => (
             <div className="favorite-events">
-              <img className="favorite-image" src={event.imgUrl} />
+              <img
+                className="favorite-image"
+                src={event.imgUrl}
+                alt="favorite"
+              />
               <Link to={`/events/${event._id}`}>
                 <div className="favorite-items">
                   <p className="favorite-name">{event.name}</p>

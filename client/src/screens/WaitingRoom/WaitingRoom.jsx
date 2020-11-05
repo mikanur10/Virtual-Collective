@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./WaitingRoom.css";
 import Layout from "../../components/shared/Layout/Layout";
 import { getEvent } from "../../services/events";
@@ -15,7 +15,7 @@ function WaitingRoom(props) {
       setEvent(response);
     };
     fetchEvent(_id);
-  }, []);
+  }, [_id]);
 
   return (
     <Layout>

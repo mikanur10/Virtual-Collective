@@ -88,7 +88,6 @@
 }
 
 .detail-heart {
-  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(1500%, -665%);

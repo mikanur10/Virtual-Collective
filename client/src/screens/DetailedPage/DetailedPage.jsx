@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./DetailedPage.css";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
-import { getEvent, deleteEvent } from "../../services/events";
+import { getEvent, deleteEvent, updateEvent } from "../../services/events";
 
 function DetailedPage(props) {
   const { _id } = useParams();
@@ -16,6 +16,25 @@ function DetailedPage(props) {
     };
     fetchEvent(_id);
   }, [_id]);
+
+  const handleFavorite = async (eventFavorite) => {
+    console.log(eventFavorite);
+      // const updated = await updateEvent(_id, events)
+    if (eventFavorite.favorite === false) {
+      let updatedEvent = {
+        ...eventFavorite,
+        favorite: true
+      }
+      await updateEvent(eventFavorite._id, updatedEvent)
+    } else {
+      let updatedEvent = {
+        ...eventFavorite,
+        favorite: false
+      }
+      await updateEvent(eventFavorite._id, updatedEvent)
+    }
+    window.location.reload()
+  }
 
   return (
     <UniversalLayout>
@@ -43,13 +62,12 @@ function DetailedPage(props) {
             </p>
           </div>
         </div>
-        <button className="heart-button-container">
           <img
+            onClick={() => { handleFavorite(event) }}
             className="detail-heart"
-            src="https://i.imgur.com/dHFsXQ4.png"
+            src={event.favorite === true ? "https://i.imgur.com/95TaJ6f.png" : "https://i.imgur.com/dHFsXQ4.png"}
             alt="heart"
           />
-        </button>
         <div className="button-container">
           <Link to={`/events/${event._id}/event`}>
             <button className="waiting-room">JOIN WAITING ROOM</button>

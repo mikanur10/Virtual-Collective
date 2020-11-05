@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./FavoritesPage.css";
-import { getEvents } from "../../services/events";
+import { getEvents, updateEvent } from "../../services/events";
 import { Link } from "react-router-dom";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
 
-const FavoritesPage = () => {
-  const [events, setEvents] = useState({});
+const FavoritesPage = (props) => {
+  const [events, setEvents] = useState([]);
   const [isLoaded, setLoaded] = useState(false);
+  
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -17,6 +18,27 @@ const FavoritesPage = () => {
     };
     fetchEvents();
   }, []);
+
+  const handleFavorite = async (eventFavorite) => {
+    console.log(eventFavorite);
+      // const updated = await updateEvent(_id, events)
+    if (eventFavorite.favorite === false) {
+      let updatedEvent = {
+        ...eventFavorite,
+        favorite: true
+      }
+      await updateEvent(eventFavorite._id, updatedEvent)
+    } else {
+      let updatedEvent = {
+        ...eventFavorite,
+        favorite: false
+      }
+      await updateEvent(eventFavorite._id, updatedEvent)
+    }
+    window.location.reload()
+  }
+  
+
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -46,13 +68,12 @@ const FavoritesPage = () => {
                   <p className="favorite-subCategory">{event.subCategory}</p>
                 </div>
               </Link>
-              <button className="heart-button-container">
                 <img
+                  onClick={() => { handleFavorite(event) }}
                   className="favorite-heart"
-                  src="https://i.imgur.com/dHFsXQ4.png"
+                  src={event.favorite === true ? "https://i.imgur.com/95TaJ6f.png" : "https://i.imgur.com/dHFsXQ4.png"}
                   alt="heart"
                 />
-              </button>
             </div>
           ))}
         </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./DetailedPage.css";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
-import { getEvent, deleteEvent} from "../../services/events";
+import { getEvent, deleteEvent } from "../../services/events";
 
 function DetailedPage(props) {
   const { _id } = useParams();
@@ -43,6 +43,13 @@ function DetailedPage(props) {
             </p>
           </div>
         </div>
+        <button className="heart-button-container">
+          <img
+            className="detail-heart"
+            src="https://i.imgur.com/dHFsXQ4.png"
+            alt="heart"
+          />
+        </button>
         <div className="button-container">
           <Link to={`/events/${event._id}/event`}>
             <button className="waiting-room">JOIN WAITING ROOM</button>
@@ -50,11 +57,19 @@ function DetailedPage(props) {
         </div>
         <div className="delete-edit">
           <Link to="/events/arts">
-        <button className="delete-button" onClick={() => deleteEvent(event._id)}>Delete</button>
+            <button
+              className="delete-button"
+              onClick={() => deleteEvent(event._id)}
+            >
+              Delete
+            </button>
           </Link>
 
-          <button className="edit-button"><Link className="edit-link" to={`/events/${event._id}/edit`}>Edit</Link></button>
-
+          <button className="edit-button">
+            <Link className="edit-link" to={`/events/${event._id}/edit`}>
+              Edit
+            </Link>
+          </button>
         </div>
       </div>
     </UniversalLayout>

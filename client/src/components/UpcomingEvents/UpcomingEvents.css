@@ -40,11 +40,22 @@
 .add-icon {
   height: 36px;
   width: 36px;
- 
-
 }
 
-.upcoming-add{
+.upcoming-add {
   display: flex;
   flex-direction: row;
+}
+
+.heart {
+  height: 70px;
+  width: 70px;
+}
+
+.heart-button-container {
+  background-color: white;
+  border: none;
+  height: 50px;
+  width: 60px;
+  margin-top: -10px;
 }

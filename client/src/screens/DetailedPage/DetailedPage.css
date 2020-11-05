@@ -55,7 +55,9 @@
   color: rgb(19, 96, 173);
 }
 
-.waiting-room,.delete-button, .edit-button {
+.waiting-room,
+.delete-button,
+.edit-button {
   background-color: rgb(11, 54, 97);
   border: none;
   color: white;
@@ -75,13 +77,21 @@
   margin-bottom: 50px;
   margin-top: 30px;
 }
-.delete-edit{
+.delete-edit {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   margin-top: 30px;
 }
-.delete-button{
+.delete-button {
   margin-right: 20px;
 }
 
+.detail-heart {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(1500%, -665%);
+  height: 70px;
+  width: 70px;
+}

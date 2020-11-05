@@ -25,10 +25,14 @@ const UpcomingEvents = () => {
 
   return (
     <div className="all-content">
-      <div className= 'upcoming-add'>
+      <div className="upcoming-add">
         <h3 className="upcoming-title">UPCOMING</h3>
         <Link to="/create">
-        <img className="add-icon" src="https://i.imgur.com/rYgXM9m.png" alt="add"/>
+          <img
+            className="add-icon"
+            src="https://i.imgur.com/rYgXM9m.png"
+            alt="add"
+          />
         </Link>
       </div>
       {filterEvents.map((event) => (
@@ -43,6 +47,13 @@ const UpcomingEvents = () => {
             </p>
             <p className="subCategory">{event.subCategory}</p>
           </div>
+          <button className="heart-button-container">
+            <img
+              className="heart"
+              src="https://i.imgur.com/dHFsXQ4.png"
+              alt="heart"
+            />
+          </button>
         </div>
       ))}
     </div>

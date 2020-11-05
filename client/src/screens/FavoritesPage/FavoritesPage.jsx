@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./FavoritesPage.css";
-import { getEvents } from "../../services/events";
+import { getEvents, updateEvent } from "../../services/events";
 import { Link } from "react-router-dom";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
 
-const FavoritesPage = () => {
+const FavoritesPage = (props) => {
   const [events, setEvents] = useState({});
   const [isLoaded, setLoaded] = useState(false);
   const [eventFavorite, setEventFavorite] = useState({

@@ -14,8 +14,8 @@ function EventCarousel(props) {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>The History of Jeff Koons</h3>
+            <p>10/27 @ 11:00am</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -28,8 +28,8 @@ function EventCarousel(props) {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>MET Virtual Walk-Through</h3>
+            <p>10/21 @ 4:00pm</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -42,10 +42,8 @@ function EventCarousel(props) {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h3>James Turrel Lecture</h3>
+            <p>10/10 @ 2pm</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

@@ -1,5 +1,7 @@
 # Virtual-Collective
 
+https://keen-bhabha-bbfd7c.netlify.app
+
 ## Whimsical Diagram
 
 https://whimsical.com/QTDaTCyr8SbKkyDw13vHm4
@@ -26,17 +28,17 @@ https://github.com/mikanur10/Virtual-Collective/projects/1?add_cards_query=is%3A
 ## Schema
 
 ```
-Const event = new Schema(
-	{
-		name: { type: String, required: true },
-		imgUrl: { type: String, required: true },
-		description: { type: String, required: true },
-		date: { type: String, required: true },
-		time: { type: String, required: true },
-		category: { type: String, required: true },
-		subCategory: { type: String, required: true },
-		favorite:  { type: Boolean, required: true },
-	}
-)
+const Event = new Schema({
+  name: { type: String, required: true },
+  title: { type: String, required: false },
+  imgUrl: { type: String, required: true },
+  imgUrlTwo: { type: String, required: false },
+  description: { type: String, required: true },
+  date: { type: String, required: true },
+  time: { type: String, required: true },
+  category: { type: String, required: true },
+  subCategory: { type: String, required: true },
+  favorite: { type: Boolean, required: true },
+});
 
 ```

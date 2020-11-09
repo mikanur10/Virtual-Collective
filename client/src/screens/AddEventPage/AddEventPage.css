@@ -1,7 +1,6 @@
 .add-container {
   border: solid 2px darkgray;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   height: 75%;
   align-self: center;

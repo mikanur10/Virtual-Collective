@@ -20,7 +20,7 @@ function WaitingRoom(props) {
   return (
     <Layout>
       <div>
-        <img className="event-image" src={event.imgUrlTwo} alt={event.name} />
+        <img className="event-image" src={event.imgUrl} alt={event.title} />
       </div>
     </Layout>
   );

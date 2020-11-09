@@ -44,9 +44,9 @@ const AllUpcoming = () => {
       <UniversalLayout>
         <div className="all-genre-content">
           <div className="upcoming-add">
-            <h3 className="upcoming-title">ALL UPCOMING EVENTS</h3>
+            <h3 className="upcoming-title">UPCOMING EVENTS</h3>
             <Link to="/create">
-              <p className="add-icon">+</p>
+              <h3 className="add-icon">CREATE EVENT</h3>
             </Link>
           </div>
           {events.map((event) => (
@@ -55,7 +55,7 @@ const AllUpcoming = () => {
                 <img className="image" src={event.imgUrl} alt="event" />
               </Link>
               <div className="info">
-                <p className="name">{event.name}</p>
+                <p className="name">{event.title}</p>
                 <p className="date">
                   {event.date} @ {event.time}
                 </p>

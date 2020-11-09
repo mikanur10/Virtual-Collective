@@ -1,0 +1,10 @@
+.add-container {
+    border: solid 2px darkgray;
+    display: flex;
+    justify-content: center;
+    height: 75%;
+    align-self: center;
+    margin-left: 75px;
+    margin-right: 75px;
+    border-radius: 12px;
+  }

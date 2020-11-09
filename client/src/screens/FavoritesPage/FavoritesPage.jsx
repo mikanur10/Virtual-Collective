@@ -52,14 +52,16 @@ const FavoritesPage = (props) => {
           </div>
           {filterEvents.map((event) => (
             <div className="favorite-events">
+            
+                
               <img
                 className="favorite-image"
                 src={event.imgUrl}
                 alt="favorite"
-              />
+                />
               <Link to={`/events/${event._id}`}>
                 <div className="favorite-items">
-                  <p className="favorite-name">{event.name}</p>
+                  <p className="favorite-name">{event.title}</p>
                   <p className="favorite-date">
                     {event.date} @ {event.time}
                   </p>
@@ -71,7 +73,8 @@ const FavoritesPage = (props) => {
                   className="favorite-heart"
                   src={event.favorite === true ? "https://i.imgur.com/95TaJ6f.png" : "https://i.imgur.com/dHFsXQ4.png"}
                   alt="heart"
-                />
+                  />
+                
             </div>
           ))}
         </div>

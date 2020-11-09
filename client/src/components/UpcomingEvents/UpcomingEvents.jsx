@@ -18,8 +18,6 @@ const UpcomingEvents = () => {
   }, []);
 
   const handleFavorite = async (eventFavorite) => {
-    console.log(eventFavorite);
-      // const updated = await updateEvent(_id, events)
     if (eventFavorite.favorite === false) {
       let updatedEvent = {
         ...eventFavorite,
@@ -47,12 +45,7 @@ const UpcomingEvents = () => {
       <div className="upcoming-add">
         <h3 className="upcoming-title">UPCOMING</h3>
         <Link to="/create">
-          {/* <img
-            className="add-icon"
-            src="https://i.imgur.com/rYgXM9m.png"
-            alt="add"
-          /> */}
-          <p className="add-icon">+</p>
+          <h3 className="add-icon">CREATE EVENT</h3>
         </Link>
       </div>
       {filterEvents.map((event) => (
@@ -60,8 +53,8 @@ const UpcomingEvents = () => {
           <Link to={`/events/${event._id}`}>
             <img className="image" src={event.imgUrl} alt="event" />
           </Link>
-          <div className="info">
-            <p className="name">{event.name}</p>
+          <div className="upcoming-info">
+            <p className="name">{event.title}</p>
             <p className="date">
               {event.date} @ {event.time}
             </p>

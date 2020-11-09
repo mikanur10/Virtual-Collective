@@ -6,10 +6,8 @@ import { createEvent } from "../../services/events";
 
 const AddEventPage = (props) => {
   const [events, setEvents] = useState({
-    name: "",
     title: "",
     imgUrl: "",
-    imgUrlTwo: "",
     description: "",
     date: "",
     time: "",
@@ -44,15 +42,6 @@ const AddEventPage = (props) => {
       </div>
       <div className="add-container">
         <form className="create-form-add" onSubmit={(e) => handleSubmit(e)}>
-          <input
-            className="input-name"
-            placeholder="Name"
-            value={events.name}
-            name="name"
-            required
-            autoFocus
-            onChange={handleChange}
-          />
           <input
             className="input-title"
             placeholder="Title"
@@ -92,13 +81,6 @@ const AddEventPage = (props) => {
             value={events.imgUrl}
             name="imgUrl"
             required
-            onChange={handleChange}
-          />
-          <input
-            className="input-image-link-two"
-            placeholder="Image Link Two"
-            value={events.imgUrlTwo}
-            name="imgUrlTwo"
             onChange={handleChange}
           />
           <select

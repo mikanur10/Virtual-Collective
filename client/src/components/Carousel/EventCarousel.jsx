@@ -10,6 +10,7 @@ function EventCarousel(props) {
             width={998}
             height={500}
             className="d-block w-100"
+            id="car-img"
             src="https://i.imgur.com/miLp4Sz.jpg"
             alt="First slide"
           />
@@ -22,6 +23,7 @@ function EventCarousel(props) {
           <img
             width={998}
             height={500}
+            id="car-img"
             className="d-block w-100"
             src=" https://i.imgur.com/skxlBJw.jpg"
             alt="Third slide"
@@ -36,13 +38,14 @@ function EventCarousel(props) {
           <img
             width={998}
             height={500}
+            id="car-img"
             className="d-block w-100"
             src="https://i.imgur.com/hS4n75H.jpg"
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>James Turrel Lecture</h3>
+            <h3>James Turrell Lecture</h3>
             <p>10/10 @ 2pm</p>
           </Carousel.Caption>
         </Carousel.Item>

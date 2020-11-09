@@ -24,6 +24,7 @@
   width: 85%;
   height: 350px;
   filter: brightness(60%);
+  background-size: auto;
 }
 
 .favorite-items {
@@ -53,6 +54,8 @@
 }
 
 .favorite-heart {
+  height: 60px;
+  width: 60px;
   top: 50%;
   left: 50%;
   transform: translate(1080%, -660%);

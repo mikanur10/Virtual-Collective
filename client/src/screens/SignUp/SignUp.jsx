@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import UniversalLayout from "../../components/shared/UniversalLayout/UniversalLayout";
 import { createUser } from "../../services/users";
-import App from "../../App";
+import './SignUp.css'
 
 function SignUp({ users, setUsers }) {
   const [isCreated, setCreated] = useState(false);
@@ -36,7 +36,7 @@ function SignUp({ users, setUsers }) {
 
   return (
     <UniversalLayout>
-      <div>
+      <div id="form-div">
         <form className="sign-create-form" onSubmit={(e) => handleSubmit(e)}>
           <input
             className="input-username"
@@ -71,7 +71,7 @@ function SignUp({ users, setUsers }) {
             name="passwordConfirm"
             required
           />
-          <button type="submit" className="submit-button">
+          <button type="submit" id="submit-button">
             Submit
           </button>
         </form>

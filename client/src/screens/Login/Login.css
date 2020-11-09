@@ -10,13 +10,6 @@
   width: 50%;
 }
 
-.input-username,
-.input-email,
-.input-password,
-.input-passwordConfirm {
-  width: 100%;
-}
-
 #submit-button {
   width: 30%;
   margin-top: 50px;

@@ -20,8 +20,6 @@ const FavoritesPage = (props) => {
   }, []);
 
   const handleFavorite = async (eventFavorite) => {
-    console.log(eventFavorite);
-      // const updated = await updateEvent(_id, events)
     if (eventFavorite.favorite === false) {
       let updatedEvent = {
         ...eventFavorite,

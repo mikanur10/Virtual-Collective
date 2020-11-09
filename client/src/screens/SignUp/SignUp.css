@@ -1,0 +1,37 @@
+#form-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.sign-create-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.input-username,
+.input-email,
+.input-password,
+.input-passwordConfirm {
+  width: 100%;
+}
+
+#submit-button {
+  width: 30%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(11, 54, 97);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}

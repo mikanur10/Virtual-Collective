@@ -18,8 +18,6 @@ function DetailedPage(props) {
   }, [_id]);
 
   const handleFavorite = async (eventFavorite) => {
-    console.log(eventFavorite);
-      // const updated = await updateEvent(_id, events)
     if (eventFavorite.favorite === false) {
       let updatedEvent = {
         ...eventFavorite,
@@ -45,10 +43,10 @@ function DetailedPage(props) {
           </Link>
         </div>
         <div id="detail-page">
-          <img className="detail-image" src={event.imgUrl} alt={event.name} />
+          <img className="detail-image" src={event.imgUrl} alt={event.title} />
           <div className="detail-container">
             <h3 className="detail-name">
-              {event.name}: {event.title}
+              {event.title}
             </h3>
             <p className="descrip-title">
               <b>Event Description</b>

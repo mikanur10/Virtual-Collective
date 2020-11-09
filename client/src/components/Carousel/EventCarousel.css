@@ -1,4 +1,6 @@
-/* .carousel-container {
-  width: 998px;
-  height: 628px;
-} */
+#car-img {
+  filter: brightness(60%);
+}
+.carousel-caption p {
+  font-size: 36px;
+}

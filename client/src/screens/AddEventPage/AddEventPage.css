@@ -1,33 +1,33 @@
-.add-container{
-    border: solid 2px darkgray;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    height: 75%;
-    align-self: center;
-    margin-left: 75px;
-    margin-right: 75px;
-    border-radius: 12px;
-
+.add-container {
+  border: solid 2px darkgray;
+  display: flex;
+  justify-content: center;
+  height: 75%;
+  align-self: center;
+  margin-left: 75px;
+  margin-right: 75px;
+  border-radius: 12px;
 }
 
-.create-form{
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    height: 75%;
-    align-items: center;
-    margin-top:20px ;
-    justify-content: space-around;
+.create-form-add {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 75%;
+  align-items: center;
+  margin-top: 100px;
+  justify-content: space-around;
 }
-input,textarea,select{
-    margin-top: 20px;
-    width: 60%;
+input,
+textarea,
+select {
+  margin-top: 20px;
+  width: 60%;
 }
-.submit-button{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: rgb(11, 54, 97);
+.submit-button {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgb(11, 54, 97);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -39,9 +39,9 @@ input,textarea,select{
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
-.create-title{
-    margin-left: 75px;
-    margin-top: 200px;
+.create-title {
+  margin-left: 75px;
+  margin-top: 200px;
   margin-bottom: 35px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;

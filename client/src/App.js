@@ -27,10 +27,11 @@ const App = (props) => {
     currentUser ? setUser(currentUser) : setUser(null);
   };
 
-  const deleteLocalStorage = () => {
-    localStorage.clear("user");
-    window.location.reload(false);
-  };
+  // const deleteLocalStorage = () => {
+  //   localStorage.clear("user");
+  //   window.location.reload(false);
+  // };
+  //Will be used once account page is created
 
   useEffect(() => {
     checkLocalStorage();

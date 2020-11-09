@@ -52,7 +52,6 @@ const AddEventPage = (props) => {
           <input
             className="input-date"
             placeholder="Date"
-            type="date"
             value={events.date}
             name="date"
             required

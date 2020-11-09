@@ -53,16 +53,8 @@ const EditEventPage = (props) => {
         <h1 className="create-title">EDIT EVENT</h1>
       </div>
       <div className="add-container">
-        <form className="create-form" onSubmit={(e) => handleSubmit(e)}>
-          <input
-            className="input-name"
-            placeholder="Name"
-            value={events.name}
-            name="name"
-            required
-            autoFocus
-            onChange={handleChange}
-          />
+        <form className="create-form-add" onSubmit={(e) => handleSubmit(e)}>
+          
           <input
             className="input-title"
             placeholder="Title"
@@ -73,7 +65,6 @@ const EditEventPage = (props) => {
           <input
             className="input-date"
             placeholder="Date"
-            type="date"
             value={events.date}
             name="date"
             required
@@ -102,13 +93,6 @@ const EditEventPage = (props) => {
             value={events.imgUrl}
             name="imgUrl"
             required
-            onChange={handleChange}
-          />
-          <input
-            className="input-image-link-two"
-            placeholder="Image Link Two"
-            value={events.imgUrlTwo}
-            name="imgUrlTwo"
             onChange={handleChange}
           />
           <select

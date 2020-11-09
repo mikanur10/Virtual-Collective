@@ -12,6 +12,7 @@ import AllUpcoming from "./screens/AllUpcoming/AllUpcoming";
 import Login from "./screens/Login/Login";
 import SignUp from "./screens/SignUp/SignUp";
 import { Route, Switch } from "react-router-dom";
+import Account from "./screens/Account/Account";
 
 const App = (props) => {
   const [user, setUser] = useState(null);
@@ -53,6 +54,7 @@ const App = (props) => {
           path="/login"
           component={() => <Login user={user} handleSetUser={handleSetUser} />}
         />
+        <Route exact path ='/account' component={Account}></Route>
       </Switch>
     </div>
   );

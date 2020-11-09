@@ -30,23 +30,27 @@ a:hover {
 }
 
 #art-category {
-  background-image: url("https://i.imgur.com/JcyAB6x.jpg");
+ background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.imgur.com/JcyAB6x.jpg");
 }
 
 #music-category {
-  background-image: url("https://i.imgur.com/EXBxDW6.jpg");
+  background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.imgur.com/EXBxDW6.jpg");
+
 }
 
 #movies-category {
-  background-image: url("https://i.imgur.com/eOeQ4z6.jpg");
+  background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.imgur.com/eOeQ4z6.jpg");
+
 }
 
 #theatre-category {
-  background-image: url("https://i.imgur.com/YgvsHQV.jpg");
+  background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.imgur.com/YgvsHQV.jpg");
+
 }
 
 #comedy-category {
-  background-image: url("https://i.imgur.com/qRBBT3w.jpg");
+  background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.imgur.com/qRBBT3w.jpg");
+
 }
 
 #category-container {

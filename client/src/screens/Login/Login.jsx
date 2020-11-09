@@ -44,6 +44,7 @@ function SignUp({ user, handleSetUser }) {
           <input
             className="input-password"
             onChange={handleChange}
+            type='password'
             placeholder="Password"
             value={userInfo.password}
             name="password"

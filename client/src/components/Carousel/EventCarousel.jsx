@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import './EventCarousel.css'
 
 function EventCarousel(props) {
   return (
@@ -14,7 +15,7 @@ function EventCarousel(props) {
             src="https://i.imgur.com/miLp4Sz.jpg"
             alt="First slide"
           />
-          <Carousel.Caption>
+          <Carousel.Caption className="carousel-caption-new">
             <h3>The History of Jeff Koons</h3>
             <p>10/27 @ 11:00am</p>
           </Carousel.Caption>
@@ -29,7 +30,7 @@ function EventCarousel(props) {
             alt="Third slide"
           />
 
-          <Carousel.Caption>
+          <Carousel.Caption className="carousel-caption-new">
             <h3>MET Virtual Walk-Through</h3>
             <p>10/21 @ 4:00pm</p>
           </Carousel.Caption>
@@ -44,7 +45,7 @@ function EventCarousel(props) {
             alt="Third slide"
           />
 
-          <Carousel.Caption>
+          <Carousel.Caption className="carousel-caption-new">
             <h3>James Turrell Lecture</h3>
             <p>10/10 @ 2pm</p>
           </Carousel.Caption>

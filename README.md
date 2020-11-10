@@ -1,6 +1,6 @@
 # Virtual-Collective
 
-Link: virtualcollective.netlify.app
+Link: https://virtualcollective.netlify.app
 
 Virtual Collective was created by a cross-functional UX and Software Development team. We utilized the Gitflow method with frequent stand-ups to discuss each iteration of the application.
 

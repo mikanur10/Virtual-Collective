@@ -1,6 +1,8 @@
 # Virtual-Collective
 
-https://keen-bhabha-bbfd7c.netlify.app
+Link: virtualcollective.netlify.app
+
+Virtual Collective was created by a cross-functional UX and Software Development team. We utilized the Gitflow method with frequent stand-ups to discuss each iteration of the application.
 
 ## Whimsical Diagram
 
@@ -29,10 +31,8 @@ https://github.com/mikanur10/Virtual-Collective/projects/1?add_cards_query=is%3A
 
 ```
 const Event = new Schema({
-  name: { type: String, required: true },
-  title: { type: String, required: false },
+  title: { type: String, required: true },
   imgUrl: { type: String, required: true },
-  imgUrlTwo: { type: String, required: false },
   description: { type: String, required: true },
   date: { type: String, required: true },
   time: { type: String, required: true },
